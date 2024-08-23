@@ -302,7 +302,7 @@ body {
     background-position: right;
     background-size: auto;
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
   }
 
   .content__img {
@@ -376,4 +376,68 @@ body {
     font-size: 16px;
     line-height: 25px;
   }
+}
+
+
+
+/* Стиль для контейнера select */
+.custom-select {
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  text-align: center;
+  margin-right: 12px;
+}
+
+/* Скрытый стандартный элемент select */
+.custom-select select {
+  display: none;
+}
+
+/* Кнопка, заменяющая select */
+.select-selected {
+  background-color: transparent;
+  color: white;
+  padding: 12px 17px;
+  border-radius: 15px;
+  border: 1px solid #FFFFFF;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Стиль для выпадающего списка */
+.select-items {
+  position: absolute;
+  background-color: transparent;
+  border: 1px solid white;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border-radius: 15px;
+  display: none;
+  flex-direction: column;
+}
+
+/* Стиль для каждого элемента в списке */
+.select-items div {
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+/* Hover эффект для каждого элемента */
+.select-items div:hover {
+  background-color: #8f9092;
+}
+
+/* Стиль для активного элемента */
+.same-as-selected {
+  background-color: #0055a5;
 }
