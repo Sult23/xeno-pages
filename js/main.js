@@ -45,15 +45,15 @@ var arrLang = {
 		'generator': 'white pages Generator',
 		'description':
 			'Our automated system allows you to quickly and easily create pages that meet the requirements of all advertising platforms.',
-		'create': 'create account',
-		'begin': 'begin using',
+		'create': 'Create account',
+		'begin': 'Begin using',
 		'welcome':
 			'Welcome to the automated Xeno Pages system - your reliable assistant in creating White Pages.',
 		'signin': 'Sign in',
 		'benefits':
 			'In just two minutes you will receive a ready-made website, fully configured for a successful upload!',
 		'registr':
-			'Register, add servers, Cloudflare accounts and domains. The generator is ready for use. The first } whites are free!',
+			'Register, add servers, Cloudflare accounts and domains. The generator is ready for use. The first 3 whites are free!',
 	},
 	'ru': {
 		'generator': 'генератор White pages',
@@ -67,7 +67,7 @@ var arrLang = {
 		'benefits':
 			'Всего за две минуты вы получите готовый сайт, полностью настроенный для успешного залива! ',
 		'registr':
-			'Зарегистрируйтесь, добавьте сервера, аккаунты Cloudflare и домены. Генератор готов к работе. Первые } вайта - бесплатно!',
+			'Зарегистрируйтесь, добавьте сервера, аккаунты Cloudflare и домены. Генератор готов к работе. Первые 3 вайта - бесплатно!',
 	},
 }
 

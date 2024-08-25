@@ -122,12 +122,12 @@ body {
   transform: translateX(-50%);
   max-width: 750px;
   width: 100%;
-  height: 700px;
+  height: 550px;
   object-fit: contain;
 }
 
 .header {
-  margin-bottom: 150px;
+  margin-bottom: 55px;
 }
 
 .btn {
@@ -145,6 +145,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.logo {
+  z-index: 10;
 }
 
 .logo__img {
@@ -173,7 +177,73 @@ body {
   background: #2F80ED;
   border-radius: 15px;
   margin-right: 88px;
+  transition: all 0.2s;
+}
 
+.header__link:hover {
+  background-color: #0055a5;
+}
+
+/* Стиль для контейнера select */
+.custom-select {
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  text-align: center;
+  margin-right: 12px;
+}
+
+/* Скрытый стандартный элемент select */
+.custom-select select {
+  display: none;
+}
+
+/* Кнопка, заменяющая select */
+.select-selected {
+  background-color: transparent;
+  color: white;
+  padding: 12px 17px;
+  border-radius: 15px;
+  border: 1px solid #FFFFFF;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Стиль для выпадающего списка */
+.select-items {
+  position: absolute;
+  background-color: transparent;
+  border: 1px solid white;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border-radius: 15px;
+  display: none;
+  flex-direction: column;
+}
+
+/* Стиль для каждого элемента в списке */
+.select-items div {
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+/* Hover эффект для каждого элемента */
+.select-items div:hover {
+  background-color: #8f9092;
+}
+
+/* Стиль для активного элемента */
+.same-as-selected {
+  background-color: #0055a5;
 }
 
 .main__inner {
@@ -190,8 +260,8 @@ body {
 .main__subtitle {
   text-transform: uppercase;
   font-weight: 200;
-  font-size: 27px;
-  line-height: 33px;
+  font-size: 1.7rem;
+  line-height: 2rem;
   margin-bottom: 25px;
 }
 
@@ -200,20 +270,21 @@ body {
   white-space: nowrap;
   font-weight: 700;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 73px;
-  line-height: 75px;
+  font-size: 4.5rem;
+  line-height: 4.5rem;
   margin-bottom: 20px;
 }
 
 .main__text {
-  font-size: 20px;
-  line-height: 33px;
+  font-size: 1.25rem;
+  line-height: 2rem;
   margin-bottom: 25px;
+  min-height: 132px;
 }
 
 .main__subtitle--2 {
-  font-size: 28px;
-  line-height: 30px;
+  font-size: 1.74rem;
+  line-height: 1.875rem;
   font-weight: 300;
   margin-bottom: 35px;
   position: relative;
@@ -228,10 +299,10 @@ body {
 }
 
 .main__text--2 {
-  font-size: 15px;
-  line-height: 26px;
+  font-size: 0.9rem;
+  line-height: 1.625rem;
   margin-bottom: 35px;
-  max-width: 450px;
+  max-width: 350px;
   width: 100%;
 }
 
@@ -278,9 +349,10 @@ body {
 }
 
 .slick-list.draggable {
-  max-width: 440px;
+  max-width: 340px;
   width: 100%;
 }
+
 
 @media(max-width: 1540px) {
   .wrapper {
@@ -298,11 +370,15 @@ body {
   .content {
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 20px;
     background: url(../img/robot.png);
     background-position: right;
     background-size: auto;
     background-repeat: no-repeat;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .content__img {
@@ -341,9 +417,6 @@ body {
 
 @media(max-width: 990px) {
   .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     padding-bottom: 0;
     background-position: bottom right;
     background-size: contain;
@@ -363,81 +436,42 @@ body {
   }
 }
 
-@media(max-width: 617px) {
-  .content {
-    height: 100vh;
+@media(max-width:520px) {
+  .content{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .header__link {
+    display: none;
   }
 
-  .main__box--2 {
-    margin-top: 100px;
+  .btn--2 {
+    background-color: #2F80ED;
+    border: none;
+    transition: all 0.2s;
+  }
+
+  .btn--2:hover {
+    background-color: #0055a5;
+  }
+
+  .main__subtitle {
+    font-size: 1.5rem;
   }
 
   .main__text {
-    font-size: 16px;
-    line-height: 25px;
+    font-size: 1rem;
   }
-}
 
+  .footer {
+    margin-top: 50px;
+  }
 
+  .footer__inner {
+    flex-direction: column;
+  }
 
-/* Стиль для контейнера select */
-.custom-select {
-  position: relative;
-  display: inline-block;
-  font-weight: 700;
-  text-align: center;
-  margin-right: 12px;
-}
-
-/* Скрытый стандартный элемент select */
-.custom-select select {
-  display: none;
-}
-
-/* Кнопка, заменяющая select */
-.select-selected {
-  background-color: transparent;
-  color: white;
-  padding: 12px 17px;
-  border-radius: 15px;
-  border: 1px solid #FFFFFF;
-  cursor: pointer;
-  text-align: center;
-  font-size: 14px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Стиль для выпадающего списка */
-.select-items {
-  position: absolute;
-  background-color: transparent;
-  border: 1px solid white;
-  z-index: 99;
-  top: 100%;
-  left: 0;
-  right: 0;
-  border-radius: 15px;
-  display: none;
-  flex-direction: column;
-}
-
-/* Стиль для каждого элемента в списке */
-.select-items div {
-  color: white;
-  padding: 10px;
-  cursor: pointer;
-  text-align: center;
-  box-sizing: border-box;
-  border-radius: 15px;
-}
-
-/* Hover эффект для каждого элемента */
-.select-items div:hover {
-  background-color: #8f9092;
-}
-
-/* Стиль для активного элемента */
-.same-as-selected {
-  background-color: #0055a5;
+  .nav {
+    margin-bottom: 20px;
+  }
 }
